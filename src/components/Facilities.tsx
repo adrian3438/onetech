@@ -3,7 +3,7 @@ export default function Facilities() {
         <>
             <div className={"facilites-section"}>
                 <div className={"facilities-title"}>
-                    <h1>사업 분야</h1>
+                    <h1>보유 장비</h1>
                     <hr/>
                 </div>
             </div>

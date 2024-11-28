@@ -402,6 +402,341 @@ strong {
     }
 }
 
+/* blog section */
+.blog-section {
+    width: 1462px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 83px;
+    margin: 0 auto;
+}
+
+.blog-section .blog-header-title {
+    margin-top: 230px;
+
+    > h1 {
+        border-color: #333333;
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    > h2 {
+        color: #666666;
+        text-align: center;
+    }
+
+    > hr {
+        border: none; /* 기본 테두리 제거 */
+        border-top: 3px solid #D83A49; /* 상단에만 선 추가 */
+        width: 25px; /* 라인 너비 */
+        margin: 20px auto;
+
+    }
+}
+
+.blog-section .blog-container {
+
+    width : 1462px;
+    margin: 0 auto;
+
+    .blog-header {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #eeeeee;
+        padding-bottom: 30px;
+    }
+
+}
+
+.blog-section .blog-lists {
+
+    .blog-items {
+        display: flex;
+        justify-content: end;
+    }
+    .blog-item-container {
+        padding: 50px 0;
+        width: 961px;
+        border-bottom: 1px solid #eeeeee;
+
+    }
+
+    .blog-content {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .blog-title {
+        p {
+            font-size: 32px;
+            font-weight: 700;
+            &:first-child {
+                font-size: 12px;
+                font-weight: 300;
+            }
+            &:nth-child(3) {
+                margin-top: 130px;
+            }
+
+        }
+    }
+}
+
+/* Contact section */
+.contact-section {
+    width: 1462px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 83px;
+    margin: 0 auto;
+}
+
+.contact-section .contact-header-title {
+    margin-top: 230px;
+
+    > h1 {
+        border-color: #333333;
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    > h2 {
+        color: #666666;
+        text-align: center;
+    }
+
+    > hr {
+        border: none; /* 기본 테두리 제거 */
+        border-top: 3px solid #D83A49; /* 상단에만 선 추가 */
+        width: 25px; /* 라인 너비 */
+        margin: 20px auto;
+
+    }
+}
+
+.contact-section .contact-wrap {
+    width: 1462px;
+    margin-top: 80px;
+    .contact-wrap-title {
+        p {
+            &:first-child {
+                font-size: 32px;
+                font-weight: 700;
+                color: #333333;
+            }
+            &:last-child {
+                margin-top: 15px;
+                font-size: 16px;
+                color: #D83A49;
+            }
+        }
+    }
+
+    form {
+        margin-top: 125px;
+        fieldset {
+            legend {
+                color: #000;
+                font-size: 45px;
+                font-weight: 600;
+                margin-bottom: 40px;
+                span {
+                    color: #BD0200;
+                }
+            }
+            &.customer-info {
+                margin-bottom: 125px;
+                > div {
+                    display: flex;
+                    gap: 30px 2%;
+                    flex-wrap: wrap;
+                    > div {
+                        width: 23%;
+                        label {
+                            color: #555;
+                            display: block;
+                            font-size: 24px;
+                            font-weight: 600;
+                            margin-bottom: 20px;
+                        }
+                        input {
+                            font-size: 18px;
+                            color: #555;
+                            font-weight: 400;
+                            outline: none;
+                            border: none;
+                            border-bottom: 2px solid #ddd;
+                            padding: 12px 0;
+                            width: 100%;
+                            ::placeholder {
+                                font-size: 18px;
+                                color: #ddd
+                            }
+                        }
+                    }
+                }
+            }
+            &.service-info {
+                margin-bottom: 125px;
+                > div {
+                    display: flex;
+                    gap: 30px 30px;
+                    flex-wrap: wrap;
+                    label {
+                        span {
+                            color: #555;
+                            font-size: 24px;
+                            font-weight: 600;
+                        }
+                        input {
+                            margin-right: 10px;
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
+            &.inquiry-detail {
+                margin-bottom: 125px;
+                .text-box {
+                    margin-bottom: 30px;
+                    input {
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: #555;
+                        line-height: 34px;
+                        margin-bottom: 15px;
+                        outline: none;
+                        padding: 0 20px;
+                        box-sizing: border-box;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                        height: 74px;
+                        border-radius: 5px;
+                        ::placeholder {
+                            font-size: 20px;
+                            line-height: 34px;
+                            font-weight: 500;
+                            color: #999
+                        }
+                    }
+                    textarea {
+                        font-size: 20px;
+                        color: #555;
+                        line-height: 34px;
+                        margin-bottom: 15px;
+                        outline: none;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                        height: 300px;
+                        border-radius: 5px;
+                        ::placeholder {
+                            font-size: 20px;
+                            color: #999
+                        }
+                    }
+                }
+                .file-box {
+                    position: relative;
+                    border-bottom: 1px solid #ddd;
+                    > p {
+                        margin-bottom: 15px;
+                        font-size: 25px;
+                        font-weight: 700;
+                        color: #555;
+                        display: block;
+                    }
+                    .uploadNameBox {
+                        width: 325px;
+                        height: 47px;
+                        position: relative;
+                        .uploadName {
+                            vertical-align: middle;
+                            border: none;
+                            width: 300px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            outline: none;
+                            padding: 13px 0;
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #555;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                        }
+                    }
+                    input[type="file"] {
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        padding: 0;
+                        overflow: hidden;
+                        border: 0;
+                    }
+                    label {
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        bottom: 0;
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: #999;
+                        height: 47px;
+                        line-height: 47px;
+                        text-align: right;
+                        vertical-align: middle;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &.agree {
+                margin-bottom: 40px;
+                padding-left: 40px;
+                position: relative;
+                label {
+                    font-size: 20px;
+                    line-height: 28px;
+                    font-weight: 600;
+                    color: #444;
+                    display: block;
+                    margin-bottom: 20px;
+                    input {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                div {
+                    color: #666;
+                    line-height: 30px;
+                }
+            }
+        }
+        .submit {
+            text-align: left;
+            > button {
+                border:none;
+                padding: 10px 30px;
+                color: #fff;
+                font-size: 24px;
+                background-color: #BD0200;
+                border-radius: 10px;
+            }
+        }
+    }
+
+
+}
+
+
+
 
 /* footer */
 .footer-wrap {
