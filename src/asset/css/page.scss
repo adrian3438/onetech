@@ -59,6 +59,36 @@ strong {
     display:flex;
     gap: 10px;
     align-items: center;
+    position: relative;
+
+    > button {
+        background: url('/images/lang-selection-arrow.svg') no-repeat 100% 50%;
+        padding-right: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .lang-box {
+        display: none;
+        position: absolute;
+        top:25px;
+        left:0;
+        border: 1px solid #939683;
+        padding : 10px;
+        background-color: #FFFFFF;
+        z-index: 10;
+        &.active {
+            display: block;
+        }
+
+
+        button {
+            padding: 0;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
 }
 
 /* 회사 소개 */
@@ -823,3 +853,8 @@ strong {
     margin-top:80px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 767px) {
+}

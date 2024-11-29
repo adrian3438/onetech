@@ -1,6 +1,24 @@
+'use client'
+
 import '../asset/css/page.scss'
 import Image from "next/image";
+import {useState} from "react";
 export default function Header() {
+
+    const [state, setState]=useState(1);
+
+    function handleLanguage() {
+        if (state === 1) {
+            setState(2);
+        } else {
+            setState(1);
+        }
+    }
+
+    function handleChangeLang( lang:string) {
+        console.log(lang);
+    }
+
     return (
         <div className="main-gnb-wrap">
             <div className="main-gnb">
@@ -22,11 +40,13 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className="lang-selection">
-                    <div>KOR</div>
-                    <div>
-                        <Image src="/images/lang-selection-arrow.svg" alt="" width={10} height={8}/>
-                    </div>
+                    <button onClick={()=>handleLanguage()}>KOR</button>
+                    <ul className={`lang-box ${state===1 ? '' : 'active'}`}>
+                        <li><button onClick={()=>handleChangeLang('KOR')}>KOR</button></li>
+                        <li><button onClick={()=>handleChangeLang('ENG')}>ENG</button></li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     )
