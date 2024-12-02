@@ -2,7 +2,7 @@ import '../../asset/css/page.scss'
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import EquipmentContent from "../../components/EquipmentContent";
-import Facilities from "../../components/Facilities";
+//import Facilities from "../../components/Facilities";
 import Blog from "../../components/Blog";
 import ContactUs from "../../components/ContactUs";
 import BusinessDivision from "../../components/BusinessDivision";
