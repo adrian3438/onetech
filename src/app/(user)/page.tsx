@@ -27,7 +27,7 @@ export default function Home() {
             <EquipmentContent/>
 
             { /* 보유 장비 기술 */}
-            <Facilities/>
+            {/*<Facilities/>*/}
 
             { /* 블로그 */}
             <Blog/>

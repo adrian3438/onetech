@@ -18,6 +18,10 @@ export default function CompanyIntroduction() {
                     <hr/>
                 </div>
                 <div className="company-intro">
+                    <div className="company-intro-image">
+                        <Image src="/images/bio-wire-dental-braces2.png" alt="Wire Bio detan braces" width={718}
+                               height={322}/>
+                    </div>
                     <div className="company-intro-contents">
                         <p>
                             <strong>진공코팅 코팅 기술</strong>은 기존 소재가 가지고 있는 단점을 획기적으로 개선할 수 있는 기술로서 경도나 강도가 낮은 저가의 금속 소재 위에
@@ -35,10 +39,7 @@ export default function CompanyIntroduction() {
                             제거하고 아울러 모재 표면을 활성화 시킴으로서 코팅 층과 모재와의 밀착력을 극대화시킬 수 있는 기술을 사용하고자 함.
                         </p>
                     </div>
-                    <div>
-                        <Image src="/images/bio-wire-dental-braces2.png" alt="Wire Bio detan braces" width={718}
-                               height={322}/>
-                    </div>
+
                 </div>
             </div>
         </>

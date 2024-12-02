@@ -96,9 +96,6 @@ export default function Footer() {
                         <div>
                             <p>Contact Info</p>
                         </div>
-                        <div>
-                            <hr/>
-                        </div>
                         <div className="contact-item">
                             <div className={"contact-image"}>
                                 <Image src="/images/address-icon.svg" alt="Wire Bio detan braces" width={40}
@@ -147,6 +144,9 @@ export default function Footer() {
                 </div>
                 <div className="footer-copyright-line">
                     <hr/>
+                    <p>
+                        Copyright (C)OneTech 2024. All Rights Reserved.
+                    </p>
                 </div>
 
             </div>

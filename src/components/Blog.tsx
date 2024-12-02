@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Blog() {
     return (
@@ -22,7 +23,12 @@ export default function Blog() {
                         <ul>
                             <li className={"blog-items"}>
                                 <div className={"blog-item-container"}>
-                                    <div className={"blog-content"}>
+                                    <Link href={"#"} className={"blog-content"}>
+                                        <div className={"blog-image"}>
+                                            <Image src="/images/blog-thumnail-image1.png"
+                                                   alt="Bio Wire Coating Exhibition"
+                                                   width={451} height={223}/>
+                                        </div>
                                         <div className="blog-title">
                                             <p>Exhibition<Image src="/images/blog-navigation-arrow.png"
                                                                 alt="blog navigation arrow" width={8} height={8}/>October
@@ -30,18 +36,19 @@ export default function Blog() {
                                             <p>Bio wire coating Exhibition</p>
                                             <p><Image src="/images/blog-read-detail-button.png"
                                                       alt="Blog read detail button" width={43} height={43}/></p>
+
                                         </div>
-                                        <div className={"blog-image"}>
-                                            <Image src="/images/blog-thumnail-image1.png"
-                                                   alt="Bio Wire Coating Exhibition"
-                                                   width={451} height={223}/>
-                                        </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </li>
                             <li className={"blog-items"}>
                                 <div className={"blog-item-container"}>
-                                    <div className={"blog-content"}>
+                                    <Link href={"#"} className={"blog-content"}>
+                                        <div className={"blog-image"}>
+                                            <Image src="/images/blog-thumnail-image1.png"
+                                                   alt="Bio Wire Coating Exhibition"
+                                                   width={451} height={223}/>
+                                        </div>
                                         <div className="blog-title">
                                             <p>Exhibition<Image src="/images/blog-navigation-arrow.png"
                                                                 alt="blog navigation arrow" width={8} height={8}/>October
@@ -49,13 +56,9 @@ export default function Blog() {
                                             <p>Bio wire coating Exhibition</p>
                                             <p><Image src="/images/blog-read-detail-button.png"
                                                       alt="Blog read detail button" width={43} height={43}/></p>
+
                                         </div>
-                                        <div className={"blog-image"}>
-                                            <Image src="/images/blog-thumnail-image1.png"
-                                                   alt="Bio Wire Coating Exhibition"
-                                                   width={451} height={223}/>
-                                        </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </li>
                         </ul>

@@ -14,7 +14,7 @@ export default function ContactUs() {
                     </div>
                     <form method={"post"}>
                         <fieldset className="customer-info">
-                            <legend><span>01</span>문의하시는 고객님의 정보를 기입해 주세요</legend>
+                            <legend><span>01</span> 문의하시는 고객님의 정보를 기입해 주세요</legend>
                             <div>
                                 <div>
                                     <label htmlFor="companyName">회사명</label>
@@ -37,8 +37,8 @@ export default function ContactUs() {
                             </div>
                         </fieldset>
 
-                        <fieldset className="customer-info">
-                            <legend><span>02</span>어떤것이 궁금하신가요</legend>
+                        <fieldset className="service-info">
+                            <legend><span>02</span> 어떤것이 궁금하신가요</legend>
                             <div>
                                 <label>
                                     <input type="radio" id="serviceInfo01" name="type" value="GE"/>
