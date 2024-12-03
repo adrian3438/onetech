@@ -801,7 +801,7 @@ strong {
 /* footer */
 .footer-wrap {
     background-color: #939683;
-    height: 598px;
+    //height: 598px;
     margin-top: 200px;
     width: 100%;
 
@@ -811,6 +811,7 @@ strong {
         margin: 0 auto;
         padding-top: 80px;
         display: flex; /* 다음 Div 가로 정렬 */
+        flex-wrap: wrap;
 
 
         .footer-logo {
@@ -1340,5 +1341,8 @@ nav {
 @media screen and (max-width: 767px) {
     .menu-button {
         display: block;
+    }
+    .onetech-logo-contents {
+        display: none;
     }
 }
