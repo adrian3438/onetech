@@ -11,6 +11,7 @@ interface Props {
 }
 
 export default function CompanyIntroduction({language}: Props) {
+    console.log('language : ', language);
     return (
         <>
             <Swiper
@@ -19,7 +20,8 @@ export default function CompanyIntroduction({language}: Props) {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
-                modules={[Autoplay]}
+                navigation={true}
+                modules={[Autoplay, Navigation]}
             >
                 <SwiperSlide>
                     <div className="main-banner" style={{background: 'url(/images/bio-wire-dental-braces.png) no-repeat 50% 0'}}>

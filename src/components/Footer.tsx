@@ -5,7 +5,7 @@ interface Props {
 }
 
 export default function Footer({language}: Props) {
-
+    console.log('language : ', language);
     return (
         <div className="footer-wrap">
             <div className="footer-container">

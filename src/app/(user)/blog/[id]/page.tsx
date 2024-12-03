@@ -1,5 +1,4 @@
 import "../../../../asset/css/page.scss";
-import Image from "next/image";
 import Link from "next/link";
 import {fetchLanguage} from "../../../../util/fetchLanguage";
 import Footer from "../../../../components/Footer";

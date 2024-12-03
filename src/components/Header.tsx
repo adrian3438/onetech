@@ -12,21 +12,12 @@ interface Props {
 }
 export default function Header({language}: Props) {
     const [visibleMenu, setVisibleMenu] = useState<boolean>(false);
-    const [menuNumber, setMenuNumber] = useState<number>(0);
     const openMobileMenu = () => {
         setVisibleMenu(true);
     }
     const closeMobileMenu = () => {
         setVisibleMenu(false);
     }
-    const handleMobileMenu = (index: number) => {
-        setMenuNumber(index);
-        if(menuNumber === index) {
-            setMenuNumber(0);
-        }
-    }
-
-
 
     const [state, setState]=useState(1);
     function handleLanguage() {
@@ -73,7 +64,7 @@ export default function Header({language}: Props) {
                     </ul>
                 </div>
                 <div className="lang-selection">
-                    <button onClick={() => handleLanguage()}>KOR</button>
+                    <button onClick={() => handleLanguage()}>{lang === 'kr' ? 'KOR' : 'ENG'}</button>
                     <ul className={`lang-box ${state === 1 ? '' : 'active'}`}>
                         <li>
                             <button onClick={() => handleChangeLang('kr')}>KOR</button>
