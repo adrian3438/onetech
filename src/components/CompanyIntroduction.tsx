@@ -1,18 +1,59 @@
-import Image from "next/image";
+'use client';
 
-export default function CompanyIntroduction() {
+import Image from "next/image";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, Navigation} from "swiper/modules";
+import "swiper/css"
+import "swiper/css/navigation"
+
+interface Props {
+    language: any
+}
+
+export default function CompanyIntroduction({language}: Props) {
     return (
         <>
-            <div className="main-banner">
-                <div>
-                    <div>
-                        <p>국내 최초</p>
-                        <p><strong>Bio Wire 치아 보정용 보철기 코팅</strong></p>
+            <Swiper
+                className="mySwiper"
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
+            >
+                <SwiperSlide>
+                    <div className="main-banner" style={{background: 'url(/images/bio-wire-dental-braces.png) no-repeat 50% 0'}}>
+                        <div>
+                            <div>
+                                <p>국내 최초</p>
+                                <p>Bio Wire <strong>치아 보정용 보철기</strong> 코팅</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="main-banner" style={{background: 'url(/images/banner-bg-02.png) no-repeat 50% 0'}}>
+                        <div>
+                            <div>
+                                <p><strong>PVD</strong> (Physical Vapor Deposition) 과 </p>
+                                <p><strong>Bio Coating</strong> 기술 융합</p>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="main-banner" style={{background: 'url(/images/banner-bg-03.png) no-repeat 50% 0'}}>
+                        <div>
+                            <div>
+                                <p>세상에서 <strong>안심하고 사용할 수 있는</strong></p>
+                                <p><strong>치아 보정용 보철기</strong> 코팅</p>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
 
-            <div className="company-intro-section">
+            <div className="company-intro-section" id="section1">
                 <div className="company-intro-title">
                     <h1>회사소개</h1>
                     <hr/>

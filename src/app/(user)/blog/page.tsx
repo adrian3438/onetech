@@ -1,10 +1,16 @@
+import "../../../asset/css/page.scss";
 import Image from "next/image";
 import Link from "next/link";
+import {fetchLanguage} from "../../../util/fetchLanguage";
+import Footer from "../../../components/Footer";
+import Header from "../../../components/Header";
 
-export default function Blog() {
+export default async function Blog({searchParams : {lang}} : any) {
+    const language = await fetchLanguage(lang);
     return (
         <>
-            <div className={"blog-section"} id="section4">
+            <Header language={language}/>
+            <div className={"blog-section"}>
                 <div className={"blog-header-title"}>
                     <h1>블로그</h1>
                     <hr/>
@@ -15,11 +21,8 @@ export default function Blog() {
                         <div>
                             <p>Get Latest News & Updates</p>
                         </div>
-                        <div>
-                            <Link href="/blog"><Image src="/images/view-all.png" alt="Wire Bio detan braces" width={179} height={37}/></Link>
-                        </div>
                     </div>
-                    <div className="blog-lists">
+                    <div className={"blog-lists"}>
                         <ul>
                             <li className={"blog-items"}>
                                 <div className={"blog-item-container"}>
@@ -63,9 +66,9 @@ export default function Blog() {
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
+            <Footer language={language}/>
         </>
     )
 }

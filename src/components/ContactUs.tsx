@@ -2,7 +2,7 @@
 export default function ContactUs() {
     return (
         <>
-            <div className={"contact-section"}>
+            <div className={"contact-section"} id="section5">
                 <div className={"contact-header-title"}>
                     <h1>문의 하기</h1>
                     <hr/>
@@ -74,7 +74,7 @@ export default function ContactUs() {
                                 <input type="file" id="dk_inquiry_pdsFile" name="attachedFile" /><label htmlFor="dk_inquiry_pdsFile">파일선택</label>
                             </div>
                         </fieldset>
-                        
+
                         <fieldset className="agree">
                             <label>
                                 <input type="checkbox" id="agreeConfirm" name="agreeTerms"/>
@@ -86,7 +86,7 @@ export default function ContactUs() {
                                 이 내용에 동의하지 않을 경우, 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 다만, 동의 거부 시 서비스 이용이 제한됩니다.
                             </div>
                         </fieldset>
-                        
+
                         <fieldset className="agree">
                             <label>
                                 <input type="checkbox" id="agreeConfirm" name="adAgree"/>
@@ -97,7 +97,7 @@ export default function ContactUs() {
                                 이 내용에 동의하지 않을 경우 광고성 정보 수신 동의를 거부할 권리가 있습니다. 다만, 동의 거부 시 서비스 이용이 제한됩니다.
                             </div>
                         </fieldset>
-                        
+
                         <div className="submit">
                             <button type="button" id="goSubmit">문의하기</button>
                         </div>

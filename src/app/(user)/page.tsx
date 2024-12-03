@@ -8,14 +8,16 @@ import ContactUs from "../../components/ContactUs";
 import BusinessDivision from "../../components/BusinessDivision";
 import CompanyHistory from "../../components/CompanyHistory";
 import CompanyIntroduction from "../../components/CompanyIntroduction";
+import {fetchLanguage} from "../../util/fetchLanguage";
 
-export default function Home() {
+export default async function Home({searchParams : {lang}} : any) {
+    const language = await fetchLanguage(lang);
     return (
         <>
-            <Header/>
+            <Header language={language}/>
 
             { /*main banner Start */}
-            <CompanyIntroduction/>
+            <CompanyIntroduction language={language}/>
 
             { /* Company History Section */}
             <CompanyHistory/>
@@ -36,7 +38,7 @@ export default function Home() {
             <ContactUs/>
 
             { /* Footer */}
-            <Footer/>
+            <Footer language={language}/>
 
         </>
     );

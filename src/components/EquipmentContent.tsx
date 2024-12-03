@@ -9,7 +9,7 @@ export default function EquipmentContent() {
 
     return (
         <>
-            <div className={"equipment-manufacturing-section"}>
+            <div className={"equipment-manufacturing-section"} id="section3">
                 <div className="equipment-manufacturing-title">
                     <h1>장비 제조 기술</h1>
                     <hr/>

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function BusinessDivision() {
     return (
         <>
-            <div className={"company-business-division-section"}>
+            <div className={"company-business-division-section"} id="section2">
 
                 <div className="company-business-division-title">
                     <h1>사업 분야</h1>
