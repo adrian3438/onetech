@@ -13,7 +13,7 @@ export default function Footer({language}: Props) {
                     <div className="footer-logo">
                         <Image src="/images/onetech-logo-white.png" alt="Wire Bio detan braces" width={150} height={65}/>
                         <div>
-                            <p>O'NETECH</p>
+                            <p>O&apos;NETECH</p>
                             <p>진공코팅 전문기업</p>
                         </div>
                     </div>
