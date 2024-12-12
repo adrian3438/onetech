@@ -13,12 +13,12 @@ export default function Footer({language}: Props) {
                     <div className="footer-logo">
                         <Image src="/images/onetech-logo-white.png" alt="Wire Bio detan braces" width={150} height={65}/>
                         <div>
-                            <p>ONETECH</p>
+                            <p>O'NETECH</p>
                             <p>진공코팅 전문기업</p>
                         </div>
                     </div>
                     <div className="footer-column-content">
-                        <p>팅 기술의 가장 큰 장점은 저가의 모재에 고기능성 박막을 피복시켜 소재의 부가가치를 획기적으로 향상시키고, 아울러 모재와 코팅층 간의 융합화를 통해 기존 소재에서는 구현할 수 없는 특성을 나타낼 수 있는 기술보유. </p>
+                        <p>코팅 기술의 가장 큰 장점은 저가의 모재에 고기능성 박막을 피복시켜 소재의 부가가치를 획기적으로 향상시키고, 아울러 모재와 코팅층 간의 융합화를 통해 기존 소재에서는 구현할 수 없는 특성을 나타낼 수 있는 기술보유. </p>
                         <p>따라서 본 기술의 응용분야는 기존 기계, 광학, 반도체, 디스플레이, 배터리, 신재생 에너지, 데코레이션 분야는 물론이고 향후 의료 바이오, 로봇, 우주 항공 분야 기술 적용</p>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ export default function Footer({language}: Props) {
                         </div>
                         <div>
                             <p>Address</p>
-                            <p>경상남도 김해시 주촌면 골든루트로 80-59 테크노파운 710호</p>
+                            <p>경상남도 김해시 주촌면 골든루트로 80-59 테크노타운 701호</p>
                         </div>
                     </div>
                     <div className="contact-item">
@@ -53,7 +53,7 @@ export default function Footer({language}: Props) {
                         </div>
                         <div>
                             <p>Email US</p>
-                            <p>lcw@rnd1.co.kr</p>
+                            <p>sales@rnd1.co.kr</p>
                         </div>
                     </div>
 
