@@ -31,9 +31,10 @@ export default function Footer({language}: Props) {
                             <Image src="/images/address-icon.svg" alt="Wire Bio detan braces" width={40}
                                    height={40}/>
                         </div>
-                        <div>
+                        <div className={"contact-info"}>
                             <p>Address</p>
                             <p>경상남도 김해시 주촌면 골든루트로 80-59 테크노타운 701호</p>
+                            <p>경상북도 영주시 풍기읍 동양대로 129 번길 70 304호</p>
                         </div>
                     </div>
                     <div className="contact-item">
@@ -41,7 +42,7 @@ export default function Footer({language}: Props) {
                             <Image src="/images/tel-icon.svg" alt="Wire Bio detan braces" width={40}
                                    height={40}/>
                         </div>
-                        <div>
+                        <div className={"contact-info"}>
                             <p>Call US</p>
                             <p>070-7543-7157</p>
                         </div>
@@ -51,7 +52,7 @@ export default function Footer({language}: Props) {
                             <Image src="/images/email-icon.svg" alt="Wire Bio detan braces" width={40}
                                    height={40}/>
                         </div>
-                        <div>
+                        <div className={"contact-info"}>
                             <p>Email US</p>
                             <p>sales@rnd1.co.kr</p>
                         </div>

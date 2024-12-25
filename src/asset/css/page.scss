@@ -48,6 +48,7 @@ strong {
 }
 
 .menu-items {
+    font-size: 18px;
     display: flex;
     width: 737px;
     align-items: center;
@@ -317,9 +318,30 @@ strong {
             display: flex;
             justify-content: space-between;
 
-            > p {
+            div:nth-child(1) {
+                width:30%;
+            }
+
+            div:nth-child(2) {
+                width:30%;
+            }
+
+            div:nth-child(3) {
+                width:40%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            p {
                 font-size: 24px;
                 font-weight: 700;
+            }
+
+            li {
+                font-size: 20px;
+                line-height: 32px;
             }
         }
     }
@@ -403,6 +425,41 @@ strong {
         }
         img {
             width: 100%;
+        }
+
+        .header {
+            width: 32%;
+            padding: 15px 25px;
+            //border-top: 1px solid #D71818;
+            border-bottom: 1px solid #D71818;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .cell-content1 {
+            font-size: 14px;
+            padding: 15px;
+            background: #EEEEEE;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        .cell-content2 {
+            font-size: 13px;
+            padding: 10px 25px;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+
+
+        .equipment-process {
+
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        ul {
+            line-height: 24px;
         }
     }
 
@@ -874,7 +931,11 @@ strong {
                 .contact-image {
                     padding-right: 20px;
                 }
+                .contact-info {
+                    line-height: 24px;
+                }
             }
+
         }
 
         #content3 {
@@ -981,6 +1042,11 @@ strong {
                     font-size: 20px;
                     font-weight: 500;
                     padding: 15px 0;
+                }
+
+                li {
+                    font-size: 20px;
+                    line-height: 32px;
                 }
 
                 img {
