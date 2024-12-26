@@ -42,11 +42,11 @@ export default function ContactUs() {
                             <div>
                                 <label>
                                     <input type="radio" id="serviceInfo01" name="type" value="GE"/>
-                                    <span>코팅 기술</span>
+                                    <span>생체 코팅 기술</span>
                                 </label>
                                 <label>
                                     <input type="radio" id="serviceInfo01" name="type" value="GE"/>
-                                    <span>진공 코팅기술</span>
+                                    <span>세라믹 코팅기술</span>
                                 </label>
                                 <label>
                                     <input type="radio" id="serviceInfo01" name="type" value="GE"/>
