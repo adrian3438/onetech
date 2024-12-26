@@ -12,7 +12,7 @@ export default function AdminSideBar () {
         {/* members. product. content. pr_video. certificate. inquiry. settings */}
         <aside>
             <h2>
-                <Image src="/images/common/footer-logo.png" alt="Valmax" width={1000} height={272} style={{width: "104px", height: "auto"}}/>
+                <Image src="/images/onetech-logo.png" alt="Onetech" width={1000} height={272} style={{width: "104px", height: "auto"}}/>
             </h2>
             <ul className="mainMenu">
 
