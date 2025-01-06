@@ -1,4 +1,4 @@
-import CommonCodeViewPage from "../../../../components/pages/dotsAdmin/common-code";
+import CommonCodeViewPage from "@/components/pages/dotsAdmin/common-code";
 
 export default function CommonCode ({searchParams : {id}} : any) {
 

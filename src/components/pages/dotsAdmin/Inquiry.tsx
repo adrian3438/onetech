@@ -119,10 +119,10 @@ export default function InquiryPage ({id} : Props) {
                             <div>
                                 <span>문의 유형</span>
                                 <span>
-                                    {data?.inquiryType === 'GE' && '그린에너지'}
-                                    {data?.inquiryType === 'PS' && '플랜트솔루션'}
-                                    {data?.inquiryType === 'MM' && '계측기'}
-                                    {data?.inquiryType === 'MS' && '마린솔루션'}
+                                    {data?.inquiryType === 'B' && '생체 바이오 코팅 기술'}
+                                    {data?.inquiryType === 'S' && '세락믹 코팅기술'}
+                                    {data?.inquiryType === 'C' && '색상구현 코팅기술'}
+                                    {data?.inquiryType === 'O' && '키다 코팅기술'}
                                 </span>
                             </div>
                         </li>
@@ -167,7 +167,7 @@ export default function InquiryPage ({id} : Props) {
                         <li>
                             <div>
                                 <span>광고성정보수신동의</span>
-                                <span>{data?.adsAgreeStatus === 'Y' ? '동의' : '미동의'}</span>
+                                <span>{data?.advertiseAgree === 'Y' ? '동의' : '미동의'}</span>
                             </div>
                         </li>
                     </ul>

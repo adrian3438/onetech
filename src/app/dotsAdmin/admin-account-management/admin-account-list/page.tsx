@@ -1,4 +1,4 @@
-import AdminAccountListPage from "../../../../components/pages/dotsAdmin/admin-account-list";
+import AdminAccountListPage from "@/components/pages/dotsAdmin/admin-account-list";
 
 export default function AdminAccountList ({searchParams : {
     page, size, keyword, column, order

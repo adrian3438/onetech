@@ -1,4 +1,4 @@
-import api from "../../../lib/api";
+import api from "@/lib/api";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 interface Props {

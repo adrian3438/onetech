@@ -6,7 +6,7 @@ import ImageUploadBox from "../../../components/DotsAdmin/Element/ImageUploadBox
 import TextAreaBox from "../../../components/DotsAdmin/Element/TextAreaBox"
 import TextBox from "../../../components/DotsAdmin/Element/TextBox"
 import api from "../../../lib/api"
-import { useAppSelector } from "../../../store/hooks"
+import { useAppSelector } from "@/store/hooks";
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import AdminDateBox from "../../../components/DotsAdmin/Element/DateBox"
@@ -15,14 +15,13 @@ interface Props {
     lang : any
 }
 export default function ContentsPage ({
-                                          id, lang
-                                      } : Props) {
+  id, lang
+} : Props) {
     const router = useRouter()
     // const query = useSearchParams()
     const managerInfo = useAppSelector((state) => state.userData.users.users)
 
     const [contentsType , setContentsType] = useState<[]>([])
-    const [businessType , setbusinessType] = useState<[]>([])
     const [data, setData] = useState<any>({
         // 컨텐츠 유형 , 사업영역 유형  , 검색키워드 , 제목
         contentType : '1', businessType : '3', searchKeyword : [], subject : '',
@@ -109,9 +108,7 @@ export default function ContentsPage ({
     useEffect(() => {
         async function fetchTypeList () {
             const res1 = await api.get(`/admin/code/getContentsTypeList.php`);
-            const res2 = await api.get(`/admin/code/getBusinessDivisionTypeList.php`);
             if(res1?.data?.result === true) {setContentsType(res1?.data?.List)}
-            if(res2?.data?.result === true) {setbusinessType(res2?.data?.List)}
         }
         fetchTypeList()
     }, [])
@@ -182,7 +179,7 @@ export default function ContentsPage ({
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        {/*<tr>
                             <th>사업영역 유형 <span className="star">*</span></th>
                             <td>
                                 <div className="selectContainer">
@@ -197,7 +194,7 @@ export default function ContentsPage ({
                                     </div>
                                 </div>
                             </td>
-                        </tr>
+                        </tr>*/}
                         <ImageUploadBox
                             title={'썸네일 이미지'}
                             name={'thumnailImage'}
@@ -211,38 +208,6 @@ export default function ContentsPage ({
                             value={data?.subject}
                             setData={setData}
                         />
-                        {/* <TextBox
-                            title={'페이스북 링크'}
-                            name={'facebook'}
-                            value={data?.facebook}
-                            setData={setData}
-                        />
-                        <TextBox
-                            title={'링크드인 링크'}
-                            name={'linkedIn'}
-                            value={data?.linkedIn}
-                            setData={setData}
-                        />
-                        <TextBox
-                            title={'유튜브 링크'}
-                            name={'youtube'}
-                            value={data?.youtube}
-                            setData={setData}
-                        />
-                        <TextBox
-                            title={'X 링크'}
-                            name={'twitter'}
-                            value={data?.twitter}
-                            setData={setData}
-                        /> */}
-                        {/* <tr>
-                            <th>보도일자 <span className="star">*</span></th>
-                            <td>
-                                <div className="dateBox">
-                                    <input type="date" value={data?.date} name="date" id="date"/>
-                                </div>
-                            </td>
-                        </tr> */}
                         <tr>
                             <th>검색 키워드 <span className="star">*</span></th>
                             <td>

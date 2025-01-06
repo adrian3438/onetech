@@ -342,6 +342,10 @@ strong {
             li {
                 font-size: 20px;
                 line-height: 32px;
+                cursor: pointer;
+                &.active {
+                    color: #D83A49;
+                }
             }
         }
     }
@@ -1298,7 +1302,7 @@ strong {
         }
     }
 }
-nav {
+nav.mobile-menu {
     opacity: 0;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.4);
@@ -1409,4 +1413,10 @@ nav {
     .onetech-logo-contents {
         display: none;
     }
+}
+
+
+.MuiPagination-ul {
+    margin-top: 100px !important;
+    justify-content: center;
 }

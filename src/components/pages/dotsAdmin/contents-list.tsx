@@ -1,6 +1,5 @@
 'use client'
 import SelectContentsModifyBox from "../../../components/DotsAdmin/Contents/SelectEditBox";
-import ListBusinessTypeBox from "../../../components/DotsAdmin/List/ListBusinessTypeBox";
 import ListContentsTypeBox from "../../../components/DotsAdmin/List/ListContentsTypeBox";
 import ListFilter from "../../../components/DotsAdmin/List/ListFilter";
 import ListSearchBox from "../../../components/DotsAdmin/List/ListSearchBox";
@@ -10,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import calCulateIndex from "../../../components/calculateIndex";
+import Paginate from "@/components/DotsAdmin/Paginate/paginate";
 
 interface Props {
     contentsType : any,
@@ -35,7 +35,6 @@ export default function ContentsListPage ({
     async function getList () {
         try{
             const response = await api.get(`/admin/contents/getContentsList.php?promLang=KR&contentsType=${contentsType}&businessDivisionType=${businessType}&page=${page}&size=${size}&keyword=${keyword}&sortColumn=promDate&sortOrder=${order}`)
-            console.log('response.data : ', response.data);
             if(response.data.result === true) {
                 setData(response.data.list);
                 setTotalCount(response.data.totalCnt);
@@ -103,10 +102,6 @@ export default function ContentsListPage ({
 
                             <ListContentsTypeBox
                                 contentsTypeId={contentsType}
-                            />
-
-                            <ListBusinessTypeBox
-                                businessTypeId={businessType}
                             />
 
                             <ListSearchBox
@@ -236,8 +231,11 @@ export default function ContentsListPage ({
 
 
                 <div className="pagerBox">
-                    <p>Showing 1 to 10 of 98 entries</p>
-
+                    <Paginate
+                        page={page}
+                        size={size}
+                        totalCount={totalCount}
+                    />
                 </div>
 
             </div>

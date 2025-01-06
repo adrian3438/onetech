@@ -8,6 +8,7 @@ import api from "../../../lib/api";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import calCulateIndex from "../../../components/calculateIndex";
+import Paginate from "@/components/DotsAdmin/Paginate/paginate";
 
 interface Props {
     inquiryType : string
@@ -41,119 +42,123 @@ export default function InquiryListPage ({
     }, [page, size, keyword, column, order, inquiryType, replyStatus])
     return(
         <>
-        <div className="contentBox contactUs">
-            <h3>Inquiry</h3>
-            <div className="flexBox">
-                <div>
-                    <h4>고객문의 리스트</h4>
-                </div>
-            </div>
-
-            <div className="toolBox">
-                <div className="left">
-                    <div className="selectBox">
-                        <ListSizeBox
-                            size={size}
-                        />
-                    </div>
-
+            <div className="contentBox contactUs">
+                <h3>Inquiry</h3>
+                <div className="flexBox">
                     <div>
-
-                        <ListInquiryTypeBox
-                            inquiryType={inquiryType}
-                        />
-
-                        <ListInquiryReplyBox
-                            replyStatus={replyStatus}
-                        />
+                        <h4>고객문의 리스트</h4>
                     </div>
                 </div>
 
-                <div className="right">
+                <div className="toolBox">
+                    <div className="left">
+                        <div className="selectBox">
+                            <ListSizeBox
+                                size={size}
+                            />
+                        </div>
 
-                    <ListSearchBox
-                        keyword={keyword}
-                    />
+                        <div>
 
-                </div>
-            </div>
+                            <ListInquiryTypeBox
+                                inquiryType={inquiryType}
+                            />
 
-            <div className="tableWrap">
-                <div className="tableType_a">
-                    <table>
+                            <ListInquiryReplyBox
+                                replyStatus={replyStatus}
+                            />
+                        </div>
+                    </div>
 
-                        <ListFilter
+                    <div className="right">
 
+                        <ListSearchBox
+                            keyword={keyword}
                         />
 
-                        <tbody>
+                    </div>
+                </div>
+
+                <div className="tableWrap">
+                    <div className="tableType_a">
+                        <table>
+
+                            <ListFilter
+
+                            />
+
+                            <tbody>
                             {data?.map((list: any, index: number) => (
-                            <tr key={list?.ID}>
-                                <td>
+                                <tr key={list?.ID}>
+                                    <td>
                                     <span className="readOnly">
-                                        {calCulateIndex(page , size , totalCount , index)}
+                                        {calCulateIndex(page, size, totalCount, index)}
                                     </span>
-                                </td>
-                                <td>
+                                    </td>
+                                    <td>
                                     <span className="readOnly">
-                                    {list?.inquiryType === 'GE' && '그린에너지'}
-                                    {list?.inquiryType === 'PS' && '플랜트솔루션'}
-                                    {list?.inquiryType === 'MM' && '계측기'}
-                                    {list?.inquiryType === 'MS' && '마린솔루션'}
+                                    {list?.inquiryType === 'B' && '생체 바이오 코팅 기술'}
+                                        {list?.inquiryType === 'S' && '세라믹 코팅기술'}
+                                        {list?.inquiryType === 'C' && '색상구현 코팅기술'}
+                                        {list?.inquiryType === 'O' && '키다 코팅기술'}
                                     </span>
-                                </td>
-                                <td>
-                                    <span className="readOnly">{list?.inquiryCompanyName}</span>
-                                </td>
-                                <td>
-                                    <span className="readOnly">{list?.inquiryName}</span>
-                                </td>
-                                <td>
-                                    <span className="readOnly">{list?.inquiryPosition}</span>
-                                </td>
-                                <td>
-                                    <span className="readOnly">{list?.inquiryEmail}</span>
-                                </td>
-                                <td>
-                                    <span className="readOnly">{list?.inquiryPhone}</span>
-                                </td>
-                                <td>
-                                    <div className="inquiryBox">
+                                    </td>
+                                    <td>
+                                        <span className="readOnly">{list?.inquiryCompanyName}</span>
+                                    </td>
+                                    <td>
+                                        <span className="readOnly">{list?.inquiryName}</span>
+                                    </td>
+                                    <td>
+                                        <span className="readOnly">{list?.inquiryPosition}</span>
+                                    </td>
+                                    <td>
+                                        <span className="readOnly">{list?.inquiryEmail}</span>
+                                    </td>
+                                    <td>
+                                        <span className="readOnly">{list?.inquiryPhone}</span>
+                                    </td>
+                                    <td>
+                                        <div className="inquiryBox">
                                         <span className="readOnly ellipsis">
                                             -
                                         </span>
-                                        <div>
                                             <div>
                                                 <div>
-                                                    {list?.inquiryContents}
+                                                    <div>
+                                                        {list?.inquiryContents}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span className="readOnly">{list?.createDate}</span>
-                                </td>
-                                <td onClick={()=>router.push(`/dotsAdmin/inquiry-management/inquiry?id=${list?.ID}`)}>
-                                    <div className="statUsBox">
-                                        {list?.replyStatus === 'U' ?
-                                        <span className="red">답변전</span>
-                                        :
-                                        <span className="blue">답변완료</span>
-                                        }
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td>
+                                        <span className="readOnly">{list?.createDate}</span>
+                                    </td>
+                                    <td onClick={() => router.push(`/dotsAdmin/inquiry-management/inquiry?id=${list?.ID}`)}>
+                                        <div className="statUsBox">
+                                            {list?.replyStatus === 'U' ?
+                                                <span className="red">답변전</span>
+                                                :
+                                                <span className="blue">답변완료</span>
+                                            }
+                                        </div>
+                                    </td>
+                                </tr>
                             ))}
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div className="pagerBox">
+                    <Paginate
+                        page={page}
+                        size={size}
+                        totalCount={totalCount}
+                    />
                 </div>
             </div>
-
-            <div className="pagerBox">
-                <p>Showing 1 to 10 of 98 entries</p>
-            </div>
-        </div>
         </>
     )
 }

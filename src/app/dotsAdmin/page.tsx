@@ -1,4 +1,4 @@
-import AdminLoginPage from "../../components/pages/dotsAdmin";
+import AdminLoginPage from "@/components/pages/dotsAdmin";
 
 export default function DotsAdmin () {
 

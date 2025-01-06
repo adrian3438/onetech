@@ -17,10 +17,10 @@ export default function ListInquiryTypeBox ({inquiryType} : Props) {
         <div className="selectBox">
             <select value={inquiryType} name="" id="" onChange={search}>
                 <option value="ALL" selected>전체</option>
-                <option value="GE" selected>그린에너지</option>
-                <option value="PS" selected>플랜트솔루션</option>
-                <option value="MM" selected>계측기</option>
-                <option value="MS" selected>마린솔루션</option>
+                <option value="B" selected>생체 바이오 코팅 기술</option>
+                <option value="S" selected>세라믹 코팅기술</option>
+                <option value="C" selected>색상구현 코팅기술</option>
+                <option value="O" selected>키다 코팅기술</option>
             </select>
         </div>
         </>

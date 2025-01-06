@@ -1,15 +1,34 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import api from "@/lib/api";
+import {useState, useEffect} from "react";
+import Paginate from "@/components/DotsAdmin/Paginate/paginate";
 
 interface Props {
     language: any;
     page?: number;
 }
 
-export default async function Blog({language, page}: Props) {
-    const res = await api.get(
-        `/user/promotion/getContentsList.php?contentType=1&userLang=${language.lang === 'kr' ? 'KR' : 'EN'}&page=${page || 1}&size=3&sortColumn=date&sortOrder=desc`);
+export default function BlogList({language, page}: Props) {
+    const [newsList, setNewsList] = useState<any[]>([]); // API 호출 결과
+    const [totalCount, setTotalCount] = useState(0); // 총 아이템 수
+
+    // API 호출 함수
+    const fetchNews = async (searchKeyword?: string) => {
+        const response = await api.get(
+            `/user/promotion/getContentsList.php?contentType=1&businessDivisionType=0&userLang=${
+                language.language === 'KR' ? 'EN' : 'KR'
+            }&page=${page || 1}&size=10&keyword=${searchKeyword}&sortColumn=date&sortOrder=desc`
+        );
+        setNewsList(response?.data?.List || []);
+        setTotalCount(response?.data?.totalCnt || 0);
+    };
+
+    useEffect(() => {
+        fetchNews('');
+    }, [page]);
 
     return (
         <>
@@ -24,13 +43,10 @@ export default async function Blog({language, page}: Props) {
                         <div>
                             <p>Get Latest News & Updates</p>
                         </div>
-                        <div>
-                            <Link href="/blog"><Image src="/images/view-all.png" alt="Wire Bio detan braces" width={179} height={37}/></Link>
-                        </div>
                     </div>
                     <div className="blog-lists">
                         <ul>
-                            {res.data.List.map((item: any, i: number) => (
+                            {newsList.map((item: any, i: number) => (
                                 <li key={i} className="blog-items">
                                     <div className={"blog-item-container"}>
                                         <Link href={`/blog/${item?.ID}`} className={"blog-content"}>
@@ -50,8 +66,8 @@ export default async function Blog({language, page}: Props) {
                             ))}
                         </ul>
                     </div>
-
                 </div>
+                <Paginate page={page || 1} size={10} totalCount={totalCount} />
             </div>
         </>
     )

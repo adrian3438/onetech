@@ -82,7 +82,7 @@ export default function Header({language}: Props) {
 
 
                 {/* Mobile Menu */}
-                <nav className={visibleMenu ? "on" : ''}>
+                <nav className={visibleMenu ? "on mobile-menu" : 'mobile-menu'}>
                     <div className="nav-header">
                         <Image src="/images/onetech-logo.png" alt="" width={150} height={65}/>
                         <button className="close" onClick={closeMobileMenu}></button>

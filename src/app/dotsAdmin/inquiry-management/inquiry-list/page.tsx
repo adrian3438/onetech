@@ -1,4 +1,4 @@
-import InquiryListPage from "../../../../components/pages/dotsAdmin/inquiry-list";
+import InquiryListPage from "@/components/pages/dotsAdmin/inquiry-list";
 
 export default function InquiryList ({searchParams : {inquiryType, replyStatus, page, size, keyword, column, order}} : any) {
 

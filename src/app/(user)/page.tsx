@@ -10,7 +10,7 @@ import CompanyHistory from "../../components/CompanyHistory";
 import CompanyIntroduction from "../../components/CompanyIntroduction";
 import {fetchLanguage} from "../../util/fetchLanguage";
 
-export default async function Home({searchParams : {lang}} : any) {
+export default async function Home({searchParams : {lang, page}} : any) {
     const language = await fetchLanguage(lang);
     return (
         <>
@@ -32,10 +32,10 @@ export default async function Home({searchParams : {lang}} : any) {
             {/*<Facilities/>*/}
 
             { /* 블로그 */}
-            <Blog/>
+            <Blog language={language} page={page || 1}/>
 
             { /* 문의하기 */}
-            <ContactUs/>
+            <ContactUs language={language}/>
 
             { /* Footer */}
             <Footer language={language}/>

@@ -1,4 +1,4 @@
-import ContentsListPage from "../../../../components/pages/dotsAdmin/contents-list";
+import ContentsListPage from "@/components/pages/dotsAdmin/contents-list";
 
 export default function ContentsList ({searchParams : {
     contentsType, businessType, page, size, keyword, column, order
