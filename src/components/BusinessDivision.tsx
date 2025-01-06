@@ -30,9 +30,9 @@ export default function BusinessDivision() {
                             </ul>
                         </div>
                         <div>
-                            {pictureIndex1 === 0 && <Image src="/images/bio-coating.png" alt="BIO Coating" width={690} height={303}/>}
-                            {pictureIndex1 === 1 && <Image src="/images/seramic-coating.png" alt="BIO Wire Coating" width={690} height={303}/>}
-                            {pictureIndex1 === 2 && <Image src="/images/color-coating.png" alt="Implant Coating" width={690} height={303}/>}
+                            {pictureIndex1 === 0 && <Image src="/images/bio-wire.png" alt="BIO Coating" width={690} height={303}/>}
+                            {pictureIndex1 === 1 && <Image src="/images/implant-coating.png" alt="BIO Wire Coating" width={690} height={303}/>}
+                            {pictureIndex1 === 2 && <Image src="/images/artificial-joint.png" alt="Implant Coating" width={690} height={303}/>}
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@ export default function BusinessDivision() {
                         </div>
                         <div>
                             {pictureIndex2 === 0 && <Image src="/images/seramic-coating.png" alt="BIO Wire Coating" width={690} height={303}/>}
-                            {pictureIndex2 === 1 && <Image src="/images/bio-coating.png" alt="BIO Coating" width={690} height={303}/>}
+                            {pictureIndex2 === 1 && <Image src="/images/fuel-battery-coating.png" alt="BIO Coating" width={690} height={303}/>}
                         </div>
                     </div>
 
