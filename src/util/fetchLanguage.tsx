@@ -8,7 +8,7 @@ export async function fetchLanguage(searchLang: string) {
 
     const langValue = searchLang || cookieLang?.value || acceptLang;
     const host = (await headers()).get('host') || "bio-coating.kr";
-    const protocol = process.env.NODE_ENV === "production" ? "https://" : "http://";
+    const protocol = process.env.NODE_ENV !== "production" ? "http://" : "https://";
 
     try {
         console.log(`Fetching language from: ${protocol}${host}/api/lang?lang=${langValue}`);
