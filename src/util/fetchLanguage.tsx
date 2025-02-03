@@ -6,7 +6,7 @@ export async function fetchLanguage (searchLang : string) {
     const cookieLang = cookie.get('LANG') || { value: 'kr' }; // 기본값을 객체 형태로 설정
     const langValue = searchLang || cookieLang?.value || 'kr';
     const host = (await headers()).get('host');
-    const protocol = 'http://'
+    const protocol = 'https://'
     try {
         const response = await axios.get(`${protocol}${host}/api/lang?lang=${langValue}`);
         return response?.data;
