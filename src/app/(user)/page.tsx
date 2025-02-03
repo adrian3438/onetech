@@ -11,7 +11,8 @@ import CompanyIntroduction from "../../components/CompanyIntroduction";
 import {fetchLanguage} from "@/util/fetchLanguage";
 
 export default async function Home({searchParams : {lang, page}} : any) {
-    const language = await fetchLanguage(lang);
+    const fetchLang = lang === undefined ? "kr" : lang;
+    const language = await fetchLanguage(fetchLang);
     return (
         <>
             <Header language={language}/>

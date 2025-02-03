@@ -17,7 +17,6 @@ export default async function Blog({language, page}: Props) {
 
         // 데이터가 정상적으로 존재하는지 확인 후 저장
         blogList = res?.data?.List || [];
-        console.log('blogList : ', blogList);
     } catch (error) {
         console.error("블로그 데이터를 불러오는 중 오류 발생:", error);
         blogList = [];
