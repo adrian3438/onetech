@@ -30,7 +30,7 @@ export default async function Blog({language, page}: Props) {
                     </div>
                     <div className="blog-lists">
                         <ul>
-                            {res.data.List.map((item: any, i: number) => (
+                            {res?.data?.List.map((item: any, i: number) => (
                                 <li key={i} className="blog-items">
                                     <div className={"blog-item-container"}>
                                         <Link href={`/blog/${item?.ID}`} className={"blog-content"}>
