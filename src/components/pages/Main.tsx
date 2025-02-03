@@ -1,3 +1,5 @@
+'use client';
+
 import CompanyIntroduction from "@/components/CompanyIntroduction";
 import CompanyHistory from "@/components/CompanyHistory";
 import BusinessDivision from "@/components/BusinessDivision";
