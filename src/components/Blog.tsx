@@ -8,8 +8,19 @@ interface Props {
 }
 
 export default async function Blog({language, page}: Props) {
-    const res = await api.get(
-        `/user/promotion/getContentsList.php?contentType=1&userLang=${language.lang === 'kr' ? 'KR' : 'EN'}&page=${page || 1}&size=3&sortColumn=date&sortOrder=desc`);
+    let blogList: any[] = [];
+
+    try {
+        const res = await api.get(
+            `/user/promotion/getContentsList.php?contentType=1&userLang=${language.lang === 'kr' ? 'KR' : 'EN'}&page=${page || 1}&size=3&sortColumn=date&sortOrder=desc`
+        );
+
+        // 데이터가 정상적으로 존재하는지 확인 후 저장
+        blogList = res?.data?.List || [];
+    } catch (error) {
+        console.error("블로그 데이터를 불러오는 중 오류 발생:", error);
+        blogList = [];
+    }
 
     return (
         <>
@@ -29,9 +40,9 @@ export default async function Blog({language, page}: Props) {
                         </div>
                     </div>
                     <div className="blog-lists">
-                        {res?.data?.List?.langth > 0 && (
+                        {blogList?.length > 0 && (
                             <ul>
-                                {res?.data?.List?.map((item: any, i: number) => (
+                                {blogList?.map((item: any, i: number) => (
                                     <li key={i} className="blog-items">
                                         <div className={"blog-item-container"}>
                                             <Link href={`/blog/${item?.ID}`} className={"blog-content"}>
