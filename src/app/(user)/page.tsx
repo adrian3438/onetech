@@ -1,3 +1,4 @@
+import {fetchLanguage} from "@/util/fetchLanguage";
 import '../../asset/css/page.scss'
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -8,7 +9,6 @@ import ContactUs from "../../components/ContactUs";
 import BusinessDivision from "../../components/BusinessDivision";
 import CompanyHistory from "../../components/CompanyHistory";
 import CompanyIntroduction from "../../components/CompanyIntroduction";
-import {fetchLanguage} from "@/util/fetchLanguage";
 
 export default async function Home({searchParams : {lang, page}} : any) {
     const fetchLang = lang === undefined ? "kr" : lang;
