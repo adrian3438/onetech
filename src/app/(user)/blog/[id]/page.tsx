@@ -15,7 +15,7 @@ export default async function BlogDetailPage({ searchParams: { lang }, params: {
         <>
             <Header language={language}/>
             <BlogDetail language={language} id={id}/>
-            <Footer language={language}/>
+            <Footer/>
         </>
     )
 }

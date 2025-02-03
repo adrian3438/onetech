@@ -9,7 +9,6 @@ interface Props {
 export default async function BlogDetail({language, id}: Props) {
     const response = await api.get(`/user/promotion/getContentDetail2.php?ID=${id}&contentType=1&userLang=${language.lang === 'kr' ? 'KR' : 'EN'}`);
     const newsDetailData = response?.data;
-    console.log(newsDetailData?.next[0]);
 
     return (
         <section className="blog-detail">

@@ -11,7 +11,7 @@ export default async function BlogPage({searchParams : {lang, page}} : any) {
         <>
             <Header language={language}/>
             <BlogList language={language} page={page || 1}/>
-            <Footer language={language}/>
+            <Footer/>
         </>
     )
 }

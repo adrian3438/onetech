@@ -6,12 +6,7 @@ import {Autoplay, Navigation} from "swiper/modules";
 import "swiper/css"
 import "swiper/css/navigation"
 
-interface Props {
-    language: any
-}
-
-export default function CompanyIntroduction({language}: Props) {
-    console.log('language : ', language);
+export default function CompanyIntroduction() {
     return (
         <>
             <Swiper

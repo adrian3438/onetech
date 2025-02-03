@@ -1,11 +1,6 @@
 import Image from "next/image";
 
-interface Props {
-    language: any
-}
-
-export default function Footer({language}: Props) {
-    console.log('language : ', language);
+export default function Footer() {
     return (
         <div className="footer-wrap">
             <div className="footer-container">

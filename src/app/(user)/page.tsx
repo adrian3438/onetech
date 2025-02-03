@@ -17,7 +17,7 @@ export default async function Home({searchParams : {lang, page}} : any) {
             <Header language={language}/>
 
             { /*main banner Start */}
-            <CompanyIntroduction language={language}/>
+            <CompanyIntroduction/>
 
             { /* Company History Section */}
             <CompanyHistory/>
@@ -38,7 +38,7 @@ export default async function Home({searchParams : {lang, page}} : any) {
             <ContactUs language={language}/>
 
             { /* Footer */}
-            <Footer language={language}/>
+            <Footer/>
 
         </>
     );
