@@ -1,17 +1,21 @@
 import axios from "axios";
 import { cookies, headers } from "next/headers";
 
-export async function fetchLanguage (searchLang : string) {
+export async function fetchLanguage(searchLang: string) {
     const cookie = await cookies();
-    const cookieLang = cookie.get('LANG') || { value: 'kr' }; // 기본값을 객체 형태로 설정
-    const langValue = searchLang || cookieLang?.value || 'kr';
-    const host = (await headers()).get('host');
-    const protocol = 'http://'
+    const cookieLang = cookie.get('LANG') || { value: 'kr' };
+    const acceptLang = (await headers()).get('accept-language')?.split(",")[0]?.slice(0, 2) || 'kr';
+
+    const langValue = searchLang || cookieLang?.value || acceptLang;
+    const host = (await headers()).get('host') || "bio-coating.kr";
+    const protocol = process.env.NODE_ENV === "production" ? "https://" : "http://";
+
     try {
+        console.log(`Fetching language from: ${protocol}${host}/api/lang?lang=${langValue}`);
         const response = await axios.get(`${protocol}${host}/api/lang?lang=${langValue}`);
         return response?.data;
     } catch (error) {
         console.error("Failed to fetch language data:", error);
-        return null;  // 혹은 기본 값을 반환하거나, 오류 처리를 여기서 할 수 있습니다.
+        return null;
     }
 }
