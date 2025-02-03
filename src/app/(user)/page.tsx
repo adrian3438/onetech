@@ -10,7 +10,7 @@ import CompanyHistory from "../../components/CompanyHistory";
 import CompanyIntroduction from "../../components/CompanyIntroduction";
 import {fetchLanguage} from "@/util/fetchLanguage";
 
-export default async function Home({searchParams : {lang, page}} : any) {
+export default async function Home({searchParams : {lang}} : any) {
     const language = await fetchLanguage(lang);
     return (
         <>
