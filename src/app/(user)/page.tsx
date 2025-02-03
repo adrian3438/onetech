@@ -8,7 +8,7 @@ import ContactUs from "../../components/ContactUs";
 import BusinessDivision from "../../components/BusinessDivision";
 import CompanyHistory from "../../components/CompanyHistory";
 import CompanyIntroduction from "../../components/CompanyIntroduction";
-import {fetchLanguage} from "../../util/fetchLanguage";
+import {fetchLanguage} from "@/util/fetchLanguage";
 
 export default async function Home({searchParams : {lang, page}} : any) {
     const language = await fetchLanguage(lang);
