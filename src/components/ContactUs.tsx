@@ -184,7 +184,7 @@ export default function ContactUs({language}: Props) {
                             <div className="file-box">
                                 <p>첨부파일 -첨부파일의 최대 파일사이즈는 10M 이하입니다.</p>
                                 <div className="uploadNameBox">
-                                    <input className="uploadName" type="text" id="contactUs_fileName" placeholder="파일을 업로드해주세요" value={fileName}/>
+                                    <input className="uploadName" type="text" id="contactUs_fileName" placeholder="파일을 업로드해주세요" value={fileName} readOnly/>
                                 </div>
                                 <input type="file" id="dk_inquiry_pdsFile" name="attachedFile" onChange={handleChange}/><label htmlFor="dk_inquiry_pdsFile">파일선택</label>
                             </div>
