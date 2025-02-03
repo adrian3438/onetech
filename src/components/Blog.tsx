@@ -29,26 +29,28 @@ export default async function Blog({language, page}: Props) {
                         </div>
                     </div>
                     <div className="blog-lists">
-                        <ul>
-                            {res?.data?.List?.map((item: any, i: number) => (
-                                <li key={i} className="blog-items">
-                                    <div className={"blog-item-container"}>
-                                        <Link href={`/blog/${item?.ID}`} className={"blog-content"}>
-                                            <div className={"blog-image"}>
-                                                <Image src={item?.thumnailFile}
-                                                       alt={item?.promSubject}
-                                                       width={451} height={223}/>
-                                            </div>
-                                            <div className="blog-title">
-                                                <p>Exhibition <Image src="/images/blog-navigation-arrow.png" alt="blog navigation arrow" width={8} height={8}/> {item?.createDate}</p>
-                                                <p>{item?.promSubject}</p>
-                                                <p><Image src="/images/blog-read-detail-button.png" alt="Blog read detail button" width={43} height={43}/></p>
-                                            </div>
-                                        </Link>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
+                        {res?.data?.List?.langth > 0 && (
+                            <ul>
+                                {res?.data?.List?.map((item: any, i: number) => (
+                                    <li key={i} className="blog-items">
+                                        <div className={"blog-item-container"}>
+                                            <Link href={`/blog/${item?.ID}`} className={"blog-content"}>
+                                                <div className={"blog-image"}>
+                                                    <Image src={item?.thumnailFile}
+                                                           alt={item?.promSubject}
+                                                           width={451} height={223}/>
+                                                </div>
+                                                <div className="blog-title">
+                                                    <p>Exhibition <Image src="/images/blog-navigation-arrow.png" alt="blog navigation arrow" width={8} height={8}/> {item?.createDate}</p>
+                                                    <p>{item?.promSubject}</p>
+                                                    <p><Image src="/images/blog-read-detail-button.png" alt="Blog read detail button" width={43} height={43}/></p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
 
                 </div>
