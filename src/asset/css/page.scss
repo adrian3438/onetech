@@ -113,7 +113,7 @@ strong {
         > div {
             position: absolute;
             top: 50%;
-            left: 0;
+            left: 50px;
             transform: translateY(-50%);
         }
     }
@@ -224,10 +224,10 @@ strong {
         background-size: 100% auto; // Div에 이미지 처리시에는 백그라운드 사이즈를 조정해야 함.
         height: 100%;
         position: relative;
-        aspect-ratio: 141 / 76; // 이미지 비율을 Tag 비율과 맞추도록 설정
-
+        aspect-ratio: 705 / 380; // 이미지 비율을 Tag 비율과 맞추도록 설정
         > div {
             transform: translate(50px, 60%); // Div 백그라운드 이미지 위에 글자 위치를 반응형으로 처리하기 위한 비율 설정
+            width: calc(100% - 60px);
             height: 100%;
         }
 
@@ -868,7 +868,7 @@ strong {
         max-width: 1462px;
         justify-content: space-between;
         margin: 0 auto;
-        padding-top: 80px;
+        padding: 80px 20px 0;
         display: flex; /* 다음 Div 가로 정렬 */
         flex-wrap: wrap;
 
@@ -1083,7 +1083,8 @@ strong {
             display: block;
         }
         .pvd-equipments {
-            width: 100%;
+            width: auto;
+            margin-bottom: 50px;
         }
 
     }
@@ -1121,6 +1122,7 @@ strong {
 
                 .blog-image {
                     width: 100%;
+                    margin-bottom: 20px;
                 }
             }
 
@@ -1412,6 +1414,27 @@ nav.mobile-menu {
     }
     .onetech-logo-contents {
         display: none;
+    }
+
+    .company-history-section .company-history-wrap .company-history-contents .history-monthly-content li {
+        padding-left: 25px;
+        margin-top: 20px;
+        height: auto;
+    }
+    .company-history-section .company-history-wrap .company-history-contents span {
+        display: block;
+        padding-left: 0;
+        margin-bottom: 5px;
+    }
+    .pvd-wrap {
+        margin: 0;
+    }
+
+
+    .company-business-division-section .company-business-division-container .company-business-division-contents div:nth-child(1),
+    .company-business-division-section .company-business-division-container .company-business-division-contents div:nth-child(2),
+    .company-business-division-section .company-business-division-container .company-business-division-contents div:nth-child(3) {
+        width: auto;
     }
 }
 

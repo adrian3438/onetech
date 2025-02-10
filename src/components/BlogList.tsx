@@ -19,7 +19,7 @@ export default function BlogList({language, page}: Props) {
     const fetchNews = async (searchKeyword?: string) => {
         const response = await api.get(
             `/user/promotion/getContentsList.php?contentType=1&businessDivisionType=0&userLang=${
-                language.lang === 'KR' ? 'EN' : 'KR'
+                language.lang === 'kr' ? 'EN' : 'KR'
             }&page=${page || 1}&size=10&keyword=${searchKeyword}&sortColumn=date&sortOrder=desc`
         );
         setNewsList(response?.data?.List || []);
