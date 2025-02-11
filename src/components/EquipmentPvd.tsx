@@ -1,12 +1,15 @@
 import Image from "next/image";
 
+interface Props {
+    language: any;
+}
 
-export default function EquipmentPdv() {
+export default function EquipmentPdv({language}: Props) {
     return (
         <>
             <div className={"pvd-wrap"}>
                 <div className={"pvd-title"}>
-                    PVD 장비설계 및 제조기술
+                {language?.Production_01}
                 </div>
                 <div className={"pvd-container"}>
                     <div className={"pvd-equipments"}>
@@ -20,7 +23,7 @@ export default function EquipmentPdv() {
                             <table>
                                 <tbody>
                                 <tr>
-                                    <td className="header" colSpan={2}>스퍼터링 장비 - Process Conditions</td>
+                                    <td className="header" colSpan={2}>{language?.Production_02}</td>
                                 </tr>
                                 <tr>
                                     <td className={"cell-content1"}>Substrate</td>
@@ -80,7 +83,7 @@ export default function EquipmentPdv() {
                                 <table>
                                     <tbody>
                                     <tr>
-                                        <td className="header" colSpan={2}>이온 플레이팅 장비 - Process Conditions</td>
+                                        <td className="header" colSpan={2}>{language?.Production_03}</td>
                                     </tr>
                                     <tr>
                                         <td className={"cell-content1"}>Substrate</td>
@@ -142,7 +145,7 @@ export default function EquipmentPdv() {
                                 <table>
                                     <tbody>
                                     <tr>
-                                        <td className="header" colSpan={2}>롤투롤 장비 - Process Conditions</td>
+                                        <td className="header" colSpan={2}>{language?.Production_04}</td>
                                     </tr>
                                     <tr>
                                         <td className={"cell-content1"}>Substrate</td>

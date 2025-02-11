@@ -30,7 +30,7 @@ export default function EquipmentContent({language} : Props) {
                 </div>
 
                 <div>
-                    {state === 1 ? <EquipmentPvd/> : <EquipmentCvd/>}
+                    {state === 1 ? <EquipmentPvd language={language}/> : <EquipmentCvd/>}
                 </div>
             </div>
         </>
