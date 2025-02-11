@@ -21,9 +21,13 @@ export default function ContactUs({language}: Props) {
         agreeTerms: "N",
         adAgree: "N"
     })
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [isCheck, setCheck] = useState<boolean>(false)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [isAdCheck, setAdCheck] = useState<boolean>(false)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [fileName, setFileName] = useState<string>('')
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [preview, setPreview] = useState<any>(null);
 
     function handleChange(e: any) {
