@@ -14,16 +14,16 @@ export default function Main({language, page}: Props) {
     return(
         <>
             { /*main banner Start */}
-            <CompanyIntroduction/>
+            <CompanyIntroduction language={language}/>
 
             { /* Company History Section */}
-            <CompanyHistory/>
+            <CompanyHistory language={language}/>
 
             { /* business division - 사업분야 */}
-            <BusinessDivision/>
+            <BusinessDivision language={language}/>
 
             { /* 장비제조 기술 */}
-            <EquipmentContent/>
+            <EquipmentContent language={language}/>
 
             { /* 보유 장비 기술 */}
             {/*<Facilities/>*/}

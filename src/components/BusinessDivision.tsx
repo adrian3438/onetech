@@ -3,7 +3,11 @@
 import Image from "next/image";
 import {useState} from "react";
 
-export default function BusinessDivision() {
+interface Props {
+    language?:any
+}
+
+export default function BusinessDivision({language} : Props) {
     const [pictureIndex1, setPictureIndex1] = useState<number>(0);
     const [pictureIndex2, setPictureIndex2] = useState<number>(0);
     const [pictureIndex3, setPictureIndex3] = useState<number>(0);
@@ -14,19 +18,19 @@ export default function BusinessDivision() {
             <div className={"company-business-division-section"} id="section2">
 
                 <div className="company-business-division-title">
-                    <h1>사업 분야</h1>
+                    <h1>{language?.Division_01}</h1>
                     <hr/>
                 </div>
                 <div className="company-business-division-container">
                     <div className={"company-business-division-contents"}>
                         <div>
-                            <p>생체 (BIO-Coating 기술)</p>
+                            <p>{language?.Division_02}</p>
                         </div>
                         <div>
                             <ul>
-                                <li className={pictureIndex1 === 0 ? 'active' : ''} onMouseOver={() => setPictureIndex1(0)}>바이오 와이어 코팅기술</li>
-                                <li className={pictureIndex1 === 1 ? 'active' : ''} onMouseOver={() => setPictureIndex1(1)}>임플란트 코팅기술</li>
-                                <li className={pictureIndex1 === 2 ? 'active' : ''} onMouseOver={() => setPictureIndex1(2)}>인공관절 코팅기술</li>
+                                <li className={pictureIndex1 === 0 ? 'active' : ''} onMouseOver={() => setPictureIndex1(0)}>{language?.Division_03}</li>
+                                <li className={pictureIndex1 === 1 ? 'active' : ''} onMouseOver={() => setPictureIndex1(1)}>{language?.Division_04}</li>
+                                <li className={pictureIndex1 === 2 ? 'active' : ''} onMouseOver={() => setPictureIndex1(2)}>{language?.Division_05}</li>
                             </ul>
                         </div>
                         <div>
@@ -38,12 +42,12 @@ export default function BusinessDivision() {
 
                     <div className={"company-business-division-contents"}>
                         <div>
-                            <p>세라믹 코팅기술</p>
+                            <p>{language?.Division_06}</p>
                         </div>
                         <div>
                             <ul>
-                                <li className={pictureIndex2 === 0 ? 'active' : ''} onMouseOver={() => setPictureIndex2(0)}>고온 소재용 코팅기술 (항공우주)</li>
-                                <li className={pictureIndex2 === 1 ? 'active' : ''} onMouseOver={() => setPictureIndex2(1)}>연료전지 코팅기술</li>
+                                <li className={pictureIndex2 === 0 ? 'active' : ''} onMouseOver={() => setPictureIndex2(0)}>{language?.Division_07}</li>
+                                <li className={pictureIndex2 === 1 ? 'active' : ''} onMouseOver={() => setPictureIndex2(1)}>{language?.Division_08}</li>
                             </ul>
                         </div>
                         <div>
@@ -55,14 +59,14 @@ export default function BusinessDivision() {
                     <div className={"company-business-division-contents"}>
                         <div>
                             <p>
-                                색상구현 코팅기술
+                            {language?.Division_09}
                             </p>
                         </div>
                         <div>
                             <ul>
-                                <li className={pictureIndex3 === 0 ? 'active' : ''} onMouseOver={() => setPictureIndex3(0)}>전력반도체용 방열기판</li>
-                                <li className={pictureIndex3 === 1 ? 'active' : ''} onMouseOver={() => setPictureIndex3(1)}>LED 방열코팅기술</li>
-                                <li className={pictureIndex3 === 2 ? 'active' : ''} onMouseOver={() => setPictureIndex3(2)}>액서서리</li>
+                                <li className={pictureIndex3 === 0 ? 'active' : ''} onMouseOver={() => setPictureIndex3(0)}>{language?.Division_08}</li>
+                                <li className={pictureIndex3 === 1 ? 'active' : ''} onMouseOver={() => setPictureIndex3(1)}>{language?.Division_09}</li>
+                                <li className={pictureIndex3 === 2 ? 'active' : ''} onMouseOver={() => setPictureIndex3(2)}>{language?.Division_10}</li>
                             </ul>
                         </div>
                         <div>
@@ -75,13 +79,13 @@ export default function BusinessDivision() {
                     <div className={"company-business-division-contents"}>
                         <div>
                             <p>
-                                기타코팅기술
+                            {language?.Division_11}
                             </p>
                         </div>
                         <div>
                             <ul>
-                                <li className={pictureIndex4 === 0 ? 'active' : ''} onMouseOver={() => setPictureIndex4(0)}>내마모성 코팅기술</li>
-                                <li className={pictureIndex4 === 1 ? 'active' : ''} onMouseOver={() => setPictureIndex4(1)}>공구 금형 식기 자동차베어링 사진</li>
+                                <li className={pictureIndex4 === 0 ? 'active' : ''} onMouseOver={() => setPictureIndex4(0)}>{language?.Division_12}</li>
+                                <li className={pictureIndex4 === 1 ? 'active' : ''} onMouseOver={() => setPictureIndex4(1)}>{language?.Division_13}</li>
                             </ul>
                         </div>
 

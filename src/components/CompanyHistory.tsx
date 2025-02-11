@@ -1,46 +1,51 @@
-export default function CompanyHistory() {
+
+interface Props {
+    language?:any
+}
+
+export default function CompanyHistory({language}: Props) {
     return (
         <>
-            <div className="company-history-section">
+            <div className="company-history-section"> 
                 <div className="company-history-title">
-                    <h1>연혁</h1>
+                    <h1>{language?.History_01}</h1>
                     <hr/>
                 </div>
 
                 <div className="company-history-wrap">
                     <div className="company-history-image">
                         <div>
-                            <p>Better life with</p>
-                            <p>Bio-dental Coating</p>
+                            <p>{language?.History_02}</p>
+                            <p>{language?.History_03}</p>
                         </div>
                     </div>
                     <div className="company-history-contents">
                         <div>
                             <ul>
                                 <li>
-                                    <p>2026</p>
+                                    <p>{language?.History_04}</p>
                                     <ul className={"history-monthly-content"}>
-                                        <li><span>08</span> 펜타플렉스 메트로 지식 산업 센타 입주 확정</li>
+                                        <li><span>{language?.History_05}</span>{language?.History_06}</li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>2024</p>
+                                    <p>{language?.History_07}</p>
                                     <ul className={"history-monthly-content"}>
-                                        <li><span>05</span> 인체 적합성 코팅기술 생체 재료용 특허출원</li>
-                                        <li><span>04</span> 경북 테크노파크 소재경량센터 입주기업 선정</li>
+                                        <li><span>{language?.History_08}</span>{language?.History_09}</li>
+                                        <li><span>{language?.History_10}</span>{language?.History_11}</li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>2022</p>
+                                    <p>{language?.History_12}</p>
                                     <ul className={"history-monthly-content"}>
-                                        <li><span>05</span> 산자부 주관 해외시장 타당성 사업 선정</li>
-                                        <li><span>02</span> 산자부 주관 IP지원 사업 선정</li>
+                                        <li><span>{language?.History_13}</span>{language?.History_14}</li>
+                                        <li><span>{language?.History_15}</span>{language?.History_16}</li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>2020</p>
+                                    <p>{language?.History_17}</p>
                                     <ul className={"history-monthly-content"}>
-                                        <li><span>08</span> 인공관절 및 제조방법 특허 보유</li>
+                                        <li><span>{language?.History_18}</span>{language?.History_19}</li>
                                     </ul>
                                 </li>
                             </ul>

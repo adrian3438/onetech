@@ -34,14 +34,14 @@ export default function BlogList({language, page}: Props) {
         <>
             <div className={"blog-section"} id="section4">
                 <div className={"blog-header-title"}>
-                    <h1>블로그</h1>
+                    <h1>{language?.Blog_01}</h1>
                     <hr/>
                 </div>
 
                 <div className={"blog-container"}>
                     <div className={"blog-header"}>
                         <div>
-                            <p>Get Latest News & Updates</p>
+                            <p>{language?.Blog_02}</p>
                         </div>
                     </div>
                     <div className="blog-lists">
@@ -56,7 +56,7 @@ export default function BlogList({language, page}: Props) {
                                                        width={451} height={223}/>
                                             </div>
                                             <div className="blog-title">
-                                                <p>Exhibition <Image src="/images/blog-navigation-arrow.png" alt="blog navigation arrow" width={8} height={8}/> {item?.createDate}</p>
+                                                <p>{language?.Blog_03} <Image src="/images/blog-navigation-arrow.png" alt="blog navigation arrow" width={8} height={8}/> {item?.createDate}</p>
                                                 <p>{item?.promSubject}</p>
                                                 <p><Image src="/images/blog-read-detail-button.png" alt="Blog read detail button" width={43} height={43}/></p>
                                             </div>

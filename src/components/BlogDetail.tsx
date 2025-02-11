@@ -23,11 +23,11 @@ export default async function BlogDetail({language, id}: Props) {
                 </section>
                 <div className="title-list">
                     <div>
-                        <span>이전글</span>
+                        <span>{language?.BlogDetail_01}</span>
                         {newsDetailData?.prev[0]?.prevUrl === '' ? '이전글 없음' : <Link href={newsDetailData?.prev[0]?.prevUrl}>{newsDetailData?.prev[0]?.prevSubject}</Link>}
                     </div>
                     <div>
-                        <span>다음글</span>
+                        <span>{language?.BlogDetail_02}</span>
                         {newsDetailData?.next[0]?.nextUrl === '' ? '다음글 없음' : <Link href={newsDetailData?.next[0]?.nextUrl}>{newsDetailData?.next[0]?.nextSubject}</Link>}
                     </div>
                 </div>
