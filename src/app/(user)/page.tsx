@@ -4,10 +4,6 @@ import Header from "../../components/Header";
 import Main from "@/components/pages/Main";
 import Footer from "../../components/Footer";
 
-interface Props {
-    language?: any
-    searchParams?: any
-}
 
 export default async function Home({searchParams : {lang, page}} : any) {
     const language = await fetchLanguage(lang);
