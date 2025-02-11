@@ -9,7 +9,7 @@ interface Props {
     searchParams?: any
 }
 
-export default async function Home({searchParams : {lang, page}} : Props) {
+export default async function Home({searchParams : {lang, page}} : any) {
     const language = await fetchLanguage(lang);
 
     return (
