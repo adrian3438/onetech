@@ -14,7 +14,7 @@ export default async function Home({searchParams : {lang, page}} : any) {
             <Main language={language} page={page}/>
 
             { /* Footer */}
-            <Footer/>
+            <Footer language={language}/>
 
         </>
     );
