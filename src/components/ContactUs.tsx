@@ -149,7 +149,7 @@ export default function ContactUs({language}: Props) {
                                 </div>
                                 <div>
                                     <label htmlFor="email">{language?.Contact_23}</label>
-                                    <input type="text" id="email" placeholder={language?.Contact_24} name="email" onChange={handleChange}/>
+                                    <input type="text" id="email" placeholder={language?.Contact_24} name="email" onChange={handleChange} style={{ cursor: "pointer" }} />
                                 </div>
                             </div>
                         </fieldset>

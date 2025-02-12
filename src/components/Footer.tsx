@@ -31,10 +31,10 @@ export default function Footer({language}: Props)  {
                             <Image src="/images/address-icon.svg" alt="Wire Bio detan braces" width={40}
                                    height={40}/>
                         </div>
-                        <div className={"contact-info"}>
-                            <p>{language?.Footer_05}</p>
-                            <p>{language?.Footer_06}</p>
-                            <p>{language?.Footer_07}</p>
+                        <div className="contact-info">
+                            <p className="mb-4">{language?.Footer_05}</p>
+                            <p className="mb-4">{language?.Footer_06}</p>
+                            <p className="mb-4">{language?.Footer_07}</p>
                         </div>
                     </div>
                     <div className="contact-item">
