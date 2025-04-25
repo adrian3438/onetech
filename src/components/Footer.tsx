@@ -34,9 +34,11 @@ export default function Footer({language}: Props)  {
                         <div className="contact-info">
                             <p className="mb-4">{language?.Footer_05}</p>
                             <p className="mb-4">{language?.Footer_06}</p>
+                            <p className="mb-4">{language?.Footer_06_01}</p>
                             <p className="mb-4">{language?.Footer_07}</p>
                         </div>
                     </div>
+                    <br/>
                     <div className="contact-item">
                         <div className={"contact-image"}>
                             <Image src="/images/tel-icon.svg" alt="Wire Bio detan braces" width={40}

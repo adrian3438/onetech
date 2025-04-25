@@ -8,11 +8,16 @@ strong {
 
 /* header CSS */
 .main-gnb-wrap {
-    border-bottom: 1px solid #D83A49;
+    border-bottom: 1px solid #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .main-gnb {
-    max-width : 1462px;
-    padding: 0 20px;
+    
+    max-width : 100%;
+    padding-left: 200px;
+    padding-right: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -862,6 +867,7 @@ strong {
     background-color: #939683;
     //height: 598px;
     margin-top: 200px;
+    padding-bottom: 30px;
     width: 100%;
 
     .footer-container {
@@ -1003,6 +1009,9 @@ strong {
 }
 
 @media screen and (max-width: 767px) {
+    .contact-item {
+        margin-bottom: 50px;
+    }
     .menu-items {
         display: none;
     }
@@ -1407,8 +1416,14 @@ nav.mobile-menu {
     .menu-button {
         display: block;
     }
+    .main-gnb {
+        padding-left: 0px !important;
+    }
 }
 @media screen and (max-width: 767px) {
+    .main-gnb {
+        padding-left: 0px !important;
+    }
     .menu-button {
         display: block;
     }
@@ -1428,6 +1443,13 @@ nav.mobile-menu {
     }
     .pvd-wrap {
         margin: 0;
+    }
+    .lang-selection > button:first-child {
+        margin-left: 150px;
+    }
+
+    .lang-selection .lang-box.active {
+        margin-left: 150px;
     }
 
 
