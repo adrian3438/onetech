@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Onetech",
@@ -13,9 +14,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+    <head>
+      {/* Google tag (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-Y263EXQ6JJ"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Y263EXQ6JJ');
+          `}
+      </Script>
+    </head>
+    <body>
+    {children}
+    </body>
     </html>
   );
 }
